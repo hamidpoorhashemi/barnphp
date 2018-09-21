@@ -1,0 +1,30 @@
+<?php
+/**
+ *
+ */
+class Mvc_manager
+{
+// ************************
+  function __construct()
+  {
+    $this->Load_rout_controller();
+  }
+  // *****************
+  public function Load_rout_controller(){
+        $router =new router;
+          $rout=$router->get_rout();
+          $controller_dir=DEFUALT_CONTROLLER_ROUT;
+          $controller_file_name=$rout;
+              if(file_exists($controller_dir.$controller_file_name.".php")){
+                include_once($controller_dir.$controller_file_name.".php");
+                $new_controller = new $controller_file_name;
+              }else{
+                include_once($controller_dir."default/"."404.php");
+              }
+  }
+  // **********************
+  public function Load_view($name,$data){
+    include_once(DEFUALT_VIEW_ROUT.$name.'.php');
+  }
+  // **********************
+}

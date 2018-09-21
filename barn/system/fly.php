@@ -1,4 +1,6 @@
 <?php
 include_once("loader/loader.php");
-$input=new Input;
-$page=$input->get('page');
+include_once("router/router.php");
+include_once("mvc/mvc_manager.php");
+// **************
+$mvc= new mvc_manager;
