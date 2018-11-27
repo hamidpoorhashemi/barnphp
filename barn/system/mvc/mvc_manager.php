@@ -17,7 +17,9 @@ class Mvc_manager
           $controller_file_name=$rout;
               if(file_exists($controller_dir.$controller_file_name.".php")){
                 include_once($controller_dir.$controller_file_name.".php");
-                $new_controller = new $controller_file_name;
+				$routArray=explode('/', $controller_file_name);
+				$className=array_pop($routArray);
+                $new_controller = new $className;
               }else{
                 include_once($controller_dir."default/"."404.php");
               }

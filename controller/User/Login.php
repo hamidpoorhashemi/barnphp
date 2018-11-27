@@ -2,20 +2,27 @@
 /**
  *@author Hamid Pourhashemi
  */
-class Home extends Barn_Controller
+class Login extends Barn_Controller
 {
 // ***************************
   function __construct()
   {
       Parent::__construct();
-      $this->load_page();
+	  $data=$this->dataProvider();
+      $this->loadPage($data);
   }
+ //***************************
 // ***************************
-          public function load_page(){
-              $data=array();
+          public function loadPage($data=array()){
               $model_page=new model_page;
               $data['page_title']=$model_page->get_page_title();
               $this->template_fBarn('home',$data);
           }
 // ***************************
+public function dataProvider(){
+
+return array();
+}
+//****************************
+//********End of class
 }
