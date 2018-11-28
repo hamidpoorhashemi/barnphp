@@ -45,17 +45,23 @@
       <!-- ************************* -->
             <div class="input-row"> 
                 <h4>Databse prefix for tbles:</h4>
-                <input id="dbpprefix" type="text">
+                <input id="dbprefix" type="text">
             </div><br>
     </div>
     
     <div class="bottom">
       <div class="text">Install System v4.0</div>
-      <div class="btn">Install</div>
+      <div class="btn" onclick="install()" >Install</div>
     </div>
+
   </div>
 </div>
 
+<script>
+function install(){
+    alert("Install");
+}
+</script>
 
 <style>
 .input-row{
