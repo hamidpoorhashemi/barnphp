@@ -2,7 +2,7 @@
 /**
  *@author Hamid Pourhashemi
  */
-class Install extends Barn_Controller
+class Setup extends Barn_Controller
 {
 // ***************************
   function __construct()
@@ -14,8 +14,8 @@ class Install extends Barn_Controller
           public function load_page(){
               $data=array();
               $model_page=new model_page;
-              $data['page_title']="Install Check";
-              mvc_manager::Load_view('wizard/install',$data);
+              $data['page_title']="Setup information";
+              mvc_manager::Load_view('wizard/setup',$data);
           }
 // ***************************
 }

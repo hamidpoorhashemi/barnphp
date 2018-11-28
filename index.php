@@ -15,4 +15,7 @@ defined("DEFUALT_TEMPLATE_ADMIN_BARN")? null : define("DEFUALT_TEMPLATE_ADMIN_BA
 define("BARN__COMPILING_MODE","Debug");
 // **************
 include_once(BARN__DIR.'system/fly.php');
+$log=new log;
+$log->show(array("logType"=>"","message"=>"Load index Page. "));
+
 // **************

@@ -7,6 +7,7 @@ class Mvc_manager
 // ************************
   function __construct()
   {
+
     $this->Load_rout_controller();
   }
   // *****************
@@ -26,7 +27,13 @@ class Mvc_manager
   }
   // **********************
   public function Load_view($name,$data){
-    include_once(DEFUALT_VIEW_ROUT.$name.'.php');
+    $log = new Log;
+    $viewFileRout=DEFUALT_VIEW_ROUT.$name.'.php';
+    if(file_exists($viewFileRout)){
+    include_once($viewFileRout);
+    }else{
+      $log->show(array("logType"=>"Fatal","message"=>"View file not exist in ". $viewFileRout . " Directory! "));
+    }
   }
   // **********************
 }
