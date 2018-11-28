@@ -12,15 +12,10 @@
     <header class="header">
 
       <a href="#" class="header__icon" id="header__icon"></a>
-      <a href="#" class="header__logo">Logo</a>
+      <a href="#" class="header__logo">prm source </a>
 
       <nav class="menu">
         <a href="#">Item 1</a>
-        <a href="#">Item 2</a>
-        <a href="#">Item 3</a>
-        <a href="#">Item 4</a>
-        <a href="#">Item 5</a>
-
       </nav>
 
     </header>

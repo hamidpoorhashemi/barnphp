@@ -6,6 +6,7 @@ class Barn_Controller
 {
   function __construct()
   {
+    
   }
   // ******************
   public function Set_page_title($title=DEFUALT_NAME){

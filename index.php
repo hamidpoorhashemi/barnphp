@@ -1,5 +1,5 @@
 <?php
-defined("HOME_ROUT")? null : define("HOME_ROUT", "home");
+    defined("HOME_ROUT")? null : define("HOME_ROUT", "home");
 
 //*********************
 defined("BARN__DIR")? null : define("BARN__DIR", "barn/");
