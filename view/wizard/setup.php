@@ -12,7 +12,7 @@
     
     </div>
   </div>
-  <div class="form">
+  <form class="form" id="setupform" method="post" action="<?=$data['links']['install'];?>" >
     <div class="" style="padding:10px   ">
       <div class="icon">
         <i class="fa fa-install"></i>
@@ -20,7 +20,7 @@
       <!-- ************************* -->
             <div class="input-row">
                 <h4>Site name</h4>
-                <input id="sitename" type="text">
+                <input value="My Site"  id="sitename" type="text">
             </div><br>
       <!-- ************************* -->
              <div class="input-row">
@@ -34,18 +34,18 @@
              </div><br>
       <!-- ************************* -->
             <div class="input-row">
-                <h4>Database name :</h4>
+                <h4>* Database name :</h4>
                 <input id="dbname" type="text">
             </div><br>
       <!-- ************************* -->
             <div class="input-row">
-                <h4>Datbase Pasword:</h4>
+                <h4>* Datbase Pasword:</h4>
                 <input id="dbpassword" type="text">
             </div><br>
       <!-- ************************* -->
             <div class="input-row"> 
                 <h4>Databse prefix for tbles:</h4>
-                <input id="dbprefix" type="text">
+                <input id="dbprefix" value="bp_" type="text">
             </div><br>
     </div>
     
@@ -54,12 +54,18 @@
       <div class="btn" onclick="install()" >Install</div>
     </div>
 
-  </div>
+  </form>
 </div>
 
 <script>
 function install(){
-    alert("Install");
+  var dbname = document.getElementById("dbname").value;
+  var dbpassword = document.getElementById("dbpassword").value;
+  if(dbname =="" || dbpassword ==""){
+    alert("please fill all Requared field!");
+    return false;
+  }
+  document.getElementById("setupform").submit();
 }
 </script>
 

@@ -15,6 +15,7 @@ class Install extends Barn_Controller
               $data=array();
               $model_page=new model_page;
               $data['page_title']="Install Check";
+              
               mvc_manager::Load_view('wizard/install',$data);
           }
 // ***************************

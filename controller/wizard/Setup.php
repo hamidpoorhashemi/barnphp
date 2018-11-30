@@ -15,6 +15,7 @@ class Setup extends Barn_Controller
               $data=array();
               $model_page=new model_page;
               $data['page_title']="Setup information";
+              $data['links']=$this->baseInfo['Links'];
               mvc_manager::Load_view('wizard/setup',$data);
           }
 // ***************************
