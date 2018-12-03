@@ -76,9 +76,6 @@ function install(){
     background:rgba(0,0,0,0.1);
     display: block;
     position: relative;
-
-
-
 }
 html, body {
   padding: 0px;

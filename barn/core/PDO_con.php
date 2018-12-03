@@ -10,10 +10,10 @@ class PDO_con
   }
 // ************************
   public function connect(){
-    $servername = "localhost";
-    $dbname="admin_barnphp";
-    $username = "root";
-    $password = "";
+    $servername = DEFAULT_CONFIG['server_name'];
+    $dbname=DEFAULT_CONFIG['db_name'];
+    $username = DEFAULT_CONFIG['db_user'];;
+    $password = DEFAULT_CONFIG['db_password'];;
       try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             // set the PDO error mode to exception
