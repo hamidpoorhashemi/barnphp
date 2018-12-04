@@ -26,6 +26,10 @@ class Log
 }
 
  function add($data){
+   
+  if(!DEFAULT_CONFIG['log_save_enable'])
+  return false;
+
         $indicesServer = array('PHP_SELF', 
       'argv', 
       'argc', 
