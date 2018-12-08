@@ -8,11 +8,12 @@ class Barn_Controller
   public $baseInfo;
   function __construct()
   {
-    $this->baseInfo['Links']['root']="";
+
+    $this->baseInfo['Links']['root']="http://localhost:8080/barnphp/";
     $this->baseInfo['Links']['home']="";
     $this->baseInfo['Links']['files']="";
     $this->baseInfo['Links']['log']="";
-    $this->baseInfo['Links']['install']="inssss";
+    $this->baseInfo['Links']['install']=$this->baseInfo['Links']['root']."wizard/install";
   }
   // ******************
   public function Set_page_title($title=DEFUALT_NAME){

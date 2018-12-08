@@ -61,7 +61,7 @@
 function install(){
   var dbname = document.getElementById("dbname").value;
   var dbpassword = document.getElementById("dbpassword").value;
-  if(dbname =="" || dbpassword ==""){
+  if(dbname ==""){
     alert("please fill all Requared field!");
     return false;
   }
